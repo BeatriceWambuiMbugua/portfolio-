@@ -1,7 +1,11 @@
+"use client"
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import React from "react";
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <div className="col-span-12 lg:col-span-8 ">
       <header className=" lg:w-[526px] h-[144px] lg:block p-8 ml-auto mb-10 bg-white dark:bg-black rounded-2xl  mt-[180px] lg:mt-[220px] hidden ">
@@ -10,6 +14,7 @@ export default function Navbar() {
             <Link
               href="/"
               className="headericons bg-gradient-to-r from-crayola to-red "
+              // className= {` headericons ${router.pathname === "/" ? "bg-gradient-to-r from-crayola to-red" : ""}`}
             >
               <span>
                 {" "}
@@ -30,7 +35,7 @@ export default function Navbar() {
               </span>
               <p className="text-white">Home</p>
             </Link>
-            <Link href="/resume" className="headericons ">
+            <Link href="/resume" className= "headericons">
               <span>
                 {" "}
                 <svg
