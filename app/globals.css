@@ -1,27 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600&family=Raleway:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background: #f2f5f9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
   }
 }
+/* logo text */
+.logo-text {
+  @apply max-sm:hidden font-pacifico font-semibold text-lg text-black tracking-wide;
+}
+.gradient-text {
+  background: linear-gradient(180deg, #ff9c1a 0%, #ed250a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Pacifico;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.app {
+  @apply w-full mx-auto relative;
+}
+/* icons */
+.themeicons {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  background: #ebf2fa;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* texts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-poppins font-semibold text-[#0D0A06];
+}
+
+p {
+  @apply font-raleway;
+}
+
+/* media icons */
+.socialmediaicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #f2f7fc;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.socialmediaicons:hover{
+  @apply animate-bounce
+}
+
+/* contact icons */
+.contacticons{
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* header */
+
+.headericons{
+  @apply w-full h-20 rounded-[20px] justify-center items-center font-poppins cursor-pointer flex flex-col font-medium text-xs text-black mx-2.5 transition-all duration-300 ease-in-out  dark:bg-[#212425]
+  dark:text-[#A6A6A6] bg-cultured
+}
+.headericons:hover{
+  @apply text-white bg-gradient-to-r from-crayola to-red dark:text-white
+}
+
+.resume-btn{
+  @apply bg-[#E1E8EF] px-2 py-1 rounded-md text-sm font-raleway font-medium
 }
