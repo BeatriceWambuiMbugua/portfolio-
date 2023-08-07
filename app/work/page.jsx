@@ -2,6 +2,7 @@ import Profile from "../components/Profile";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -22,7 +23,6 @@ export default function Portfolio() {
             <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 " />
           </div>
 
-         
           <div className="flex gap-2 justify-end mb-4 dark:text-cultured">
             <p>All</p>
             <p>App Development</p>
@@ -33,16 +33,22 @@ export default function Portfolio() {
 
           <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
             <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <a href="https://ideaflow-ruby.vercel.app/" target="_blank">
-                <img
+              <Link href="https://ideaflow-ruby.vercel.app/" target="_blank">
+                <Image
                   class="w-full"
                   src="/assets/images/ideaflow.png"
                   alt="ideaflow"
                   className=" transition duration-300 ease-in-out hover:scale-110"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
-              </a>
+              </Link>
               <div class="px-6 py-4">
-                <h4 class="font-bold text-xl mb-2 dark:text-cultured">IdeaFlow</h4>
+                <h4 class="font-bold text-xl mb-2 dark:text-cultured">
+                  IdeaFlow
+                </h4>
                 <p class="text-gray-700 text-base dark:text-cultured">
                   A powerful platform for capturing and sharing AI-Powered Ideas
                 </p>
@@ -61,17 +67,25 @@ export default function Portfolio() {
             </div>
 
             <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <a href="https://www.figma.com/@beatricewambui" target="_blank">
-                <img
-                  class="w-full"
+              <Link
+                href="https://www.figma.com/@beatricewambui"
+                target="_blank"
+              >
+                <Image
                   src="/assets/images/figma_profile.png"
                   alt="Figma Profile"
-                  className=" transition duration-300 ease-in-out hover:scale-110 shadow-md"
+                  className="w-full transition duration-300 ease-in-out hover:scale-110"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
-              </a>
+              </Link>
 
               <div class="px-6 py-4 ">
-                <h4 class="font-bold text-xl mb-2 dark:text-cultured">Figma Profile</h4>
+                <h4 class="font-bold text-xl mb-2 dark:text-cultured">
+                  Figma Profile
+                </h4>
                 <p class="text-gray-700 text-base dark:text-cultured">
                   Crafting visually appealing and intuitive user interfaces
                 </p>
@@ -90,23 +104,30 @@ export default function Portfolio() {
             </div>
 
             <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <a href="https://imdb-clone-phi.vercel.app/about" target="_blank">
-                <img
-                  class="w-full"
+              <Link
+                href="https://imdb-clone-phi.vercel.app/about"
+                target="_blank"
+              >
+                <Image
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                   src="/assets/images/IMDB_clone.png"
                   alt="IMDB image"
                   className=" transition duration-300 ease-in-out hover:scale-110"
                 />
-              </a>
+              </Link>
 
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 dark:text-cultured">IMDB</div>
+                <div class="font-bold text-xl mb-2 dark:text-cultured">
+                  IMDB
+                </div>
                 <p class="text-gray-700 text-base dark:text-cultured">
                   IMDB, Your ultimate destination for all things movies.
                 </p>
               </div>
               <div class="px-6 pt-4 pb-2">
-              
                 <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
                   #appdevelopment
                 </span>
@@ -119,24 +140,32 @@ export default function Portfolio() {
               </div>
             </div>
             <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <a href="https://www.linkedin.com/in/beatricewambuimbugua/" target="_blank">
-                <img
-                  class="w-full h-[175px]"
+              <Link
+                href="https://www.linkedin.com/in/beatricewambuimbugua/"
+                target="_blank"
+              >
+                <Image
                   src="/assets/images/mentorship.jpeg"
                   alt="Mentorship"
-                  className=" transition duration-300 ease-in-out hover:scale-110"
-                  objectFit= "contain"
+                  className=" transition duration-300 ease-in-out hover:scale-110 object-cover"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "38%" }}
+                 
                 />
-              </a>
+              </Link>
 
               <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 dark:text-cultured">Mentorship</div>
+                <div class="font-bold text-xl mb-2 dark:text-cultured">
+                  Mentorship
+                </div>
                 <p class="text-gray-700 text-base dark:text-cultured">
-                  As a technical mentor, I have great joy in sharing my work with others.
+                  As a technical mentor, I have great joy in sharing my work
+                  with others.
                 </p>
               </div>
               <div class="px-6 pt-4 pb-2">
-              
                 <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
                   #mentorship
                 </span>
