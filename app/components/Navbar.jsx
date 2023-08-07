@@ -1,11 +1,15 @@
-"use client"
+"use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import React from "react";
 
 export default function Navbar() {
-  const router = useRouter();
+  const currentRoute = usePathname();
+  const linkStyle = "headericons";
+  const activeStyle =
+    linkStyle + " bg-gradient-to-r from-crayola to-red text-white ";
+  const nonActiveStyle = linkStyle + " text-black";
   return (
     <div className="col-span-12 lg:col-span-8 ">
       <header className=" lg:w-[526px] h-[144px] lg:block p-8 ml-auto mb-10 bg-white dark:bg-black rounded-2xl  mt-[180px] lg:mt-[220px] hidden ">
@@ -13,18 +17,17 @@ export default function Navbar() {
           <ul className="flex">
             <Link
               href="/"
-              className="headericons bg-gradient-to-r from-crayola to-red "
-              // className= {` headericons ${router.pathname === "/" ? "bg-gradient-to-r from-crayola to-red" : ""}`}
+             
+              className={currentRoute === "/" ? activeStyle : nonActiveStyle}
             >
               <span>
-                {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6 text-white hover:stroke-white dark:stroke-cultured"
+                  class="w-6 h-6 hover:stroke-white dark:stroke-cultured dark:text-cultured"
                 >
                   <path
                     stroke-linecap="round"
@@ -33,9 +36,15 @@ export default function Navbar() {
                   />
                 </svg>
               </span>
-              <p className="text-white">Home</p>
+              <p className="dark:text-cultured">Home</p>
+              
             </Link>
-            <Link href="/resume" className= "headericons">
+            <Link
+              href="/resume"
+              className={
+                currentRoute === "/resume" ? activeStyle : nonActiveStyle
+              }
+            >
               <span>
                 {" "}
                 <svg
@@ -53,9 +62,14 @@ export default function Navbar() {
                   />
                 </svg>
               </span>
-              Resume
+              <p className="dark:text-cultured">Resume</p>
             </Link>
-            <Link href="/work" className="headericons ">
+            <Link
+              href="/work"
+              className={
+                currentRoute === "/work" ? activeStyle : nonActiveStyle
+              }
+            >
               <span>
                 {" "}
                 <svg
@@ -73,9 +87,14 @@ export default function Navbar() {
                   />
                 </svg>
               </span>
-              Work
+              <p className="dark:text-cultured">Work</p>
             </Link>
-            <Link href="/contact" className="headericons ">
+            <Link
+              href="/contact"
+              className={
+                currentRoute === "/contact" ? activeStyle : nonActiveStyle
+              }
+            >
               <span>
                 {" "}
                 <svg
@@ -87,7 +106,6 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                 >
                   <path
-                    
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
@@ -95,7 +113,7 @@ export default function Navbar() {
                   />
                 </svg>
               </span>
-              Contact
+              <p className="dark:text-cultured">Contact</p>
             </Link>
           </ul>
         </nav>

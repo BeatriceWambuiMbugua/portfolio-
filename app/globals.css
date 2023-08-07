@@ -87,7 +87,7 @@ p {
 /* header */
 
 .headericons{
-  @apply w-full h-20 rounded-[20px] justify-center items-center font-poppins cursor-pointer flex flex-col font-medium text-xs text-black mx-2.5 transition-all duration-300 ease-in-out  dark:bg-[#212425]
+  @apply w-full h-20 rounded-[20px] justify-center items-center font-poppins cursor-pointer flex flex-col font-medium text-xs  mx-2.5 transition-all duration-300 ease-in-out  dark:bg-[#212425]
   dark:text-[#A6A6A6] bg-cultured
 }
 .headericons:hover{

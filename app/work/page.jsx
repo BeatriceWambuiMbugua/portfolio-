@@ -32,7 +32,7 @@ export default function Portfolio() {
           </div>
 
           <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-            <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
+            <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black" >
               <Link href="https://ideaflow-ruby.vercel.app/" target="_blank">
                 <Image
                   class="w-full"
