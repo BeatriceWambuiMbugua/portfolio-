@@ -157,64 +157,67 @@ export default function Contact() {
                 and more so <strong>mentorship</strong>.{" "}
               </p>
             </div>
-            <div className="">
-              <form id="myForm">
-                <div class="relative z-0 w-full mt-[40px] mb-8 group">
-                  <input
-                    type="text"
-                    name="name"
-                    className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-crayola focus:outline-none focus:ring-0 focus:border-red peer"
-                    placeholder=" "
-                    required
-                  />
-                  <label
-                    for="name"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red peer-focus:dark:text-crayola peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
-                  >
-                    Name *
-                  </label>
-                </div>
-                <div className="relative z-0 w-full mb-8 group">
-                  <input
-                    type="email"
-                    name="user_email"
-                    className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-crayola focus:outline-none focus:ring-0 focus:border-crayola peer"
-                    placeholder=" "
-                    id="user_email"
-                    required
-                  />
-                  <label
-                    for="user_email"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-crayola peer-focus:dark:text-red peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
-                  >
-                    Email *
-                  </label>
-                </div>
-                <div className="relative z-0 w-full mb-8 group">
-                  <input
-                    type="text"
-                    name="message"
-                    className="block autofill:bg-yellow-200 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-crayola focus:outline-none focus:ring-0 focus:border-red peer"
-                    placeholder=" "
-                    id="message"
-                    required
-                  />
-                  <label
-                    for="message"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-crayola peer-focus:dark:text-red peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8"
-                  >
-                    Message *
-                  </label>
-                </div>
-                <div class="transition-all duration-300 ease-in-out inline-block hover:bg-gradient-to-r from-crayola to-red rounded-lg mt-3">
-                  <input
+            <section class="bg-white dark:bg-eerie-black rounded-xl mt-4">
+              <div class="py-8 lg:py-8 px-4 mx-auto max-w-screen-md rounded-xl">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                  Contact Me
+                </h2>
+               
+                <form action="#" class="space-y-8">
+                  <div>
+                    <label
+                      for="email"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >
+                      Your email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-[#0D0D0D] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      placeholder="example@gmail.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-[#0D0D0D] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                      placeholder="Let me know how I can be of help ..."
+                      required
+                    />
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label
+                      for="message"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                    >
+                      Your message
+                    </label>
+                    <textarea
+                      id="message"
+                      rows="6"
+                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-[#0D0D0D] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                      placeholder="Leave a message..."
+                    ></textarea>
+                  </div>
+                  
+                  <button
                     type="submit"
-                    class=" transition ease-in duration-200 font-semibold cursor-pointer border-color-910 hover:border-transparent px-6 py-2 rounded-lg border-[2px] hover:text-white dark:text-white "
-                    value="Submit"
-                  />
-                </div>
-              </form>
-            </div>
+                    class="mt-4 font-raleway inline-flex py-2 px-4 rounded-3xl justify-center align-middle gap-2 text-white bg-gradient-to-r from-crayola to-red"
+                  >
+                    Send message
+                  </button>
+                </form>
+              </div>
+            </section>
           </div>
           <div className="text-center pt-4">
             <Footer />

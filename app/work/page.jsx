@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import AppDevelopment from "../components/AppDevelopment";
+import WebsiteDevelopment from "../components/WebsiteDevelopment";
+import Design from "../components/Design";
+import Mentorship from "../components/Mentorship";
 
 export default function Portfolio() {
   return (
@@ -22,162 +26,130 @@ export default function Portfolio() {
             </h3>
             <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 " />
           </div>
+          {/* Tab Content */}
 
-          <div className="flex gap-2 justify-end mb-4 dark:text-cultured">
-            <p>All</p>
-            <p>App Development</p>
-            <p>Web Development</p>
-            <p>Design</p>
-            <p>Mentorship</p>
-          </div>
-
-          <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-            <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black" >
-              <Link href="https://ideaflow-ruby.vercel.app/" target="_blank">
-                <Image
-                  class="w-full"
-                  src="/assets/images/ideaflow.png"
-                  alt="ideaflow"
-                  className=" transition duration-300 ease-in-out hover:scale-110"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </Link>
-              <div class="px-6 py-4">
-                <h4 class="font-bold text-xl mb-2 dark:text-cultured">
-                  IdeaFlow
-                </h4>
-                <p class="text-gray-700 text-base dark:text-cultured">
-                  A powerful platform for capturing and sharing AI-Powered Ideas
-                </p>
-              </div>
-              <div class="px-6 pt-4 pb-2">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-raleway text-xs font-semibold text-gray-700 mr-2 mb-2">
-                  #webdevelopment
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-raleway text-xs font-semibold text-gray-700 mr-2 mb-2">
-                  #next.js
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-raleway text-xs font-semibold text-gray-700 mr-2 mb-2">
-                  #appdevelopment
-                </span>
-              </div>
-            </div>
-
-            <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <Link
-                href="https://www.figma.com/@beatricewambui"
-                target="_blank"
-              >
-                <Image
-                  src="/assets/images/figma_profile.png"
-                  alt="Figma Profile"
-                  className="w-full transition duration-300 ease-in-out hover:scale-110"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </Link>
-
-              <div class="px-6 py-4 ">
-                <h4 class="font-bold text-xl mb-2 dark:text-cultured">
-                  Figma Profile
-                </h4>
-                <p class="text-gray-700 text-base dark:text-cultured">
-                  Crafting visually appealing and intuitive user interfaces
-                </p>
-              </div>
-              <div class="px-6 pt-4 pb-2">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-raleway text-xs font-semibold text-gray-700 mr-2 mb-2">
-                  #UI
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #UI/UX
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #UX
-                </span>
-              </div>
-            </div>
-
-            <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <Link
-                href="https://imdb-clone-phi.vercel.app/about"
-                target="_blank"
-              >
-                <Image
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
-                  src="/assets/images/IMDB_clone.png"
-                  alt="IMDB image"
-                  className=" transition duration-300 ease-in-out hover:scale-110"
-                />
-              </Link>
-
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 dark:text-cultured">
-                  IMDB
-                </div>
-                <p class="text-gray-700 text-base dark:text-cultured">
-                  IMDB, Your ultimate destination for all things movies.
-                </p>
-              </div>
-              <div class="px-6 pt-4 pb-2">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #appdevelopment
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #webdevelopment
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #ui/ux
-                </span>
-              </div>
-            </div>
-            <div class="rounded overflow-hidden shadow-md dark:bg-eerie-black">
-              <Link
-                href="https://www.linkedin.com/in/beatricewambuimbugua/"
-                target="_blank"
-              >
-                <Image
-                  src="/assets/images/mentorship.jpeg"
-                  alt="Mentorship"
-                  className=" transition duration-300 ease-in-out hover:scale-110 object-cover"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "38%" }}
-                 
-                />
-              </Link>
-
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2 dark:text-cultured">
+          <div class="mb-4 border-b border-gray-200 dark:border-eerie-black ">
+            <ul
+              class="flex flex-wrap -mb-px text-sm font-medium text-center justify-end"
+              id="myTab"
+              data-tabs-toggle="#myTabContent"
+              role="tablist"
+            >
+              <li class="mr-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg"
+                  id="all-tab"
+                  data-tabs-target="#all"
+                  type="button"
+                  role="tab"
+                  aria-controls="all"
+                  aria-selected="true"
+                >
+                  All
+                </button>
+              </li>
+              <li class="mr-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="app-tab"
+                  data-tabs-target="#appdevelopment"
+                  type="button"
+                  role="tab"
+                  aria-controls="appdevelopment"
+                  aria-selected="false"
+                >
+                  App Development
+                </button>
+              </li>
+              <li class="mr-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="web-tab"
+                  data-tabs-target="#webdevelopment"
+                  type="button"
+                  role="tab"
+                  aria-controls="webdevelopment"
+                  aria-selected= "false"
+                >
+                  Web Development
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="design-tab"
+                  data-tabs-target="#design"
+                  type="button"
+                  role="tab"
+                  aria-controls="design"
+                  aria-selected="false"
+                >
+                  Design
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="mentorship-tab"
+                  data-tabs-target="#mentorship"
+                  type="button"
+                  role="tab"
+                  aria-controls="mentorship"
+                  aria-selected="false"
+                >
                   Mentorship
-                </div>
-                <p class="text-gray-700 text-base dark:text-cultured">
-                  As a technical mentor, I have great joy in sharing my work
-                  with others.
-                </p>
-              </div>
-              <div class="px-6 pt-4 pb-2">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #mentorship
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #webdevelopment
-                </span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 font-raleway text-xs">
-                  #networking
-                </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div id="myTabContent">
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-black"
+              id="all"
+              role="tabpanel"
+              aria-labelledby="all-tab"
+            >
+              <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+                <AppDevelopment />
+                <Design />
+                <WebsiteDevelopment />
+                <Mentorship />
               </div>
             </div>
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
+              id="appdevelopment"
+              role="tabpanel"
+              aria-labelledby="app-tab"
+            >
+              <AppDevelopment />
+            </div>
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
+              id="webdevelopment"
+              role="tabpanel"
+              aria-labelledby="web-tab"
+            >
+              <WebsiteDevelopment />
+            </div>
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
+              id="design"
+              role="tabpanel"
+              aria-labelledby="design-tab"
+            >
+              <Design />
+            </div>
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
+              id="mentorship"
+              role="tabpanel"
+              aria-labelledby="mentorship-tab"
+            >
+              <Mentorship />
+            </div>
           </div>
+
           <div className="text-center pt-4">
             <Footer />
           </div>
