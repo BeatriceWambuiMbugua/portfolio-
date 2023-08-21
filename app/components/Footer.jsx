@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       
-        <p className="dark:text-cultured">
+        <p className="dark:text-cultured text-xs md:text-sm">
           &#169; <span className="font-semibold">{currentYear}</span> All Rights
           Reserved by <Link href={"/"} className="hover:text-red dark:hover:text-crayola">Beatrice Wambui</Link>
         </p>
