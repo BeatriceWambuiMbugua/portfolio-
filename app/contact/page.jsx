@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className=" container mx-auto grid grid-cols-12 md:gap-10 justify-between  px-5  dark:bg-eerie-black">
-      <Profile />
+      <Profile/>
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
         <div
@@ -19,11 +19,11 @@ export default function Contact() {
             <h3 className="font-normal text-3xl dark:text-cultured  ">
               Contact
             </h3>
-            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 " />
+            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden " />
           </div>
 
           {/* contact cards */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
             <div className="bg-[#FFEED9] rounded-[20px] p-3">
               <div className="flex gap-2 p-3">
                 <svg
@@ -138,9 +138,9 @@ export default function Contact() {
                   </defs>
                 </svg>
                 <div>
-                  <p className="mb-2">Email:</p>
+                  <p className="mb-2  ">Email:</p>
                   <Link href={"mailto:wambuimbeatrice@gmail.com"}>
-                    <p>wambuimbeatrice@gmail.com</p>
+                    <p className="break-all">wambuimbeatrice@gmail.com</p>
                   </Link>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Contact() {
             </div>
             <section class="bg-white dark:bg-eerie-black rounded-xl mt-4">
               <div class="py-8 lg:py-8 px-4 mx-auto max-w-screen-md rounded-xl">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                <h2 class="mb-4 text-2xl tracking-tight font-extrabold text-left md:text-4xl md:text-center  text-gray-900 dark:text-white">
                   Contact Me
                 </h2>
                

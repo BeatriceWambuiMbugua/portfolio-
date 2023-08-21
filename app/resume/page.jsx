@@ -18,7 +18,7 @@ export default function Resume() {
             <h3 className="font-normal text-3xl dark:text-cultured  ">
               Resume
             </h3>
-            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 " />
+            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden" />
           </div>
           {/* Education/Experience */}
           <div className="grid grid-cols-2 mb-5 dark:text-cultured ">

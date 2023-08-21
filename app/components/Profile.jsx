@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Profile() {
   return (
-    <div className=" col-span-12 lg:col-span-4 top-40 lg:h-screen lg:sticky mt-[220px]">
+    <div className=" col-span-12 lg:col-span-4 top-40 lg:h-screen lg:sticky mt-[220px]hidden md:block ">
       <div className="bg-white rounded-[20px] relative w-full mb-6 lg:mb-0 text-center dark:bg-black px-6 pb-6">
         <Image
           src="/assets/images/profile-picture.jpg"

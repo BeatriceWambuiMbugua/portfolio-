@@ -12,7 +12,7 @@ import 'animate.css';
 export default function Portfolio() {
   return (
     <div className=" container mx-auto grid grid-cols-12 md:gap-10 justify-between  px-5  dark:bg-eerie-black">
-      <Profile />
+    <Profile />
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
         <div
@@ -25,7 +25,7 @@ export default function Portfolio() {
             <h3 className="font-normal text-3xl dark:text-cultured  ">
               Portfolio
             </h3>
-            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 " />
+            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden " />
           </div>
           {/* Tab Content */}
 
