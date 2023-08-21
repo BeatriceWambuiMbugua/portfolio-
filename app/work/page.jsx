@@ -7,6 +7,7 @@ import AppDevelopment from "../components/AppDevelopment";
 import WebsiteDevelopment from "../components/WebsiteDevelopment";
 import Design from "../components/Design";
 import Mentorship from "../components/Mentorship";
+import 'animate.css';
 
 export default function Portfolio() {
   return (
@@ -102,7 +103,7 @@ export default function Portfolio() {
               </li>
             </ul>
           </div>
-          <div id="myTabContent">
+          <div id="myTabContent" class="animate__fadeInUp animate__delay-3s">
             <div
               class="hidden p-4 rounded-lg bg-gray-50 dark:bg-black"
               id="all"
