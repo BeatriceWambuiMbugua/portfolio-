@@ -1,13 +1,11 @@
-import Profile from "../components/Profile";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Image from "next/image";
-import Link from "next/link";
-import AppDevelopment from "../components/AppDevelopment";
-import WebsiteDevelopment from "../components/WebsiteDevelopment";
-import Design from "../components/Design";
-import Mentorship from "../components/Mentorship";
-import 'animate.css';
+import AppDevelopment from "../../components/AppDevelopment";
+import Design from "../../components/Design";
+import Footer from "../../components/Footer";
+import Mentorship from "../../components/Mentorship";
+import Navbar from "../../components/Navbar";
+import Profile from "../../components/Profile";
+import WebsiteDevelopment from "../../components/WebsiteDevelopment";
+
 
 export default function Portfolio() {
   return (
@@ -16,7 +14,7 @@ export default function Portfolio() {
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
         <div
-          className="lg:rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6"
+          className="rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6"
           data-aos="fade-up"
           data-aos-duration="3000"
         >
@@ -103,7 +101,7 @@ export default function Portfolio() {
               </li>
             </ul>
           </div>
-          <div id="myTabContent" class="animate__fadeInUp animate__delay-3s">
+          <div id="myTabContent">
             <div
               class="hidden p-4 rounded-lg bg-gray-50 dark:bg-black"
               id="all"
@@ -159,3 +157,5 @@ export default function Portfolio() {
     </div>
   );
 }
+
+

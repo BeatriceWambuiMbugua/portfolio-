@@ -1,6 +1,6 @@
-import Profile from "../components/Profile";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Profile from "../../components/Profile";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import Link from "next/link";
 
 export default function Contact() {
@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
         <div
-          className="lg:rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6"
+          className="rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6"
           data-aos="fade-up"
           data-aos-duration="3000"
         >

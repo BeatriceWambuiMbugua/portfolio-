@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Profile from "../components/Profile";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import Profile from "../../components/Profile";
 
 export default function Resume() {
   return (
@@ -9,13 +9,13 @@ export default function Resume() {
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
         <div
-          className="lg:rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6"
+          className="rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6"
           data-aos="fade-up"
           data-aos-duration="3000"
         >
           {/* Resume heading */}
           <div className="flex gap-4 items-center pt-4 mt-5 ">
-            <h3 className="font-normal text-3xl dark:text-cultured  ">
+            <h3 className="font-normal text-3xl dark:text-cultured  mb-4 ">
               Resume
             </h3>
             <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden" />

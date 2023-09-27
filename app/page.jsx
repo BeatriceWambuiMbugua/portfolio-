@@ -1,10 +1,9 @@
 "use client";
 
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Profile from "./components/Profile";
-import 'animate.css';
-
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Profile from "../components/Profile";
+import "animate.css";
 
 export default function Home() {
   return (
@@ -12,12 +11,7 @@ export default function Home() {
       <Profile />
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
-        <div
-          className="rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6 animate__animated animate__fadeInUp animate__delay-2s "
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          
-        >
+        <div className="rounded-2xl bg-white dark:bg-black pb-6 mb-10 px-6 ">
           {/* About Me heading */}
           <div className="flex gap-4 items-center pt-4 mt-5 ">
             <h3 className=" font-normal text-3xl  dark:text-cultured  ">

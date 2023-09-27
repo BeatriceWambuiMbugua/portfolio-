@@ -1,23 +1,32 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import React from "react";
+import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import DarkModeSwitch from "./DarkModeSwitch";
+import Header from "./Header";
+import Image from "next/image";
 
 export default function Navbar() {
   const currentRoute = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   const linkStyle = "headericons";
   const activeStyle =
     linkStyle + " bg-gradient-to-r from-crayola to-red text-white ";
   const nonActiveStyle = linkStyle + " text-black";
+
   return (
-    <div className="col-span-12 lg:col-span-8 ">
-      <header className=" lg:w-[526px] h-[144px] lg:block p-8 ml-auto mb-10 bg-white dark:bg-black rounded-2xl  mt-[180px] lg:mt-[220px] hidden ">
-        <nav className="hidden lg:block">
+    <div className="col-span-12 lg:col-span-8">
+      <header className="lg:w-[526px] h-[144px] lg:block p-8 ml-auto mb-10 bg-white dark:bg-black rounded-2xl  mt-[180px] lg:mt-[220px] hidden">
+        <nav className="lg:block">
           <ul className="flex">
             <Link
               href="/"
-             
               className={currentRoute === "/" ? activeStyle : nonActiveStyle}
             >
               <span>
@@ -36,8 +45,8 @@ export default function Navbar() {
                   />
                 </svg>
               </span>
+
               <p className="dark:text-cultured">Home</p>
-              
             </Link>
             <Link
               href="/resume"
@@ -46,7 +55,6 @@ export default function Navbar() {
               }
             >
               <span>
-                {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -71,7 +79,6 @@ export default function Navbar() {
               }
             >
               <span>
-                {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -96,7 +103,6 @@ export default function Navbar() {
               }
             >
               <span>
-                {" "}
                 <svg
                   class="w-6 h-6  hover:stroke-white dark:stroke-cultured"
                   aria-hidden="true"
@@ -118,6 +124,90 @@ export default function Navbar() {
           </ul>
         </nav>
       </header>
+
+      {/* Mobile Navigation Menu */}
+      <div className="lg:hidden pt-5 mb-16">
+        <div className="container mx-auto flex justify-between">
+          <div>
+            <Link href={"/"} className="gap-2 flex flex-center">
+              <Image
+                src={"/assets/images/profile-picture.jpg"}
+                alt="Logo"
+                width={32}
+                height={32}
+                className="rounded-full"
+              />
+              <h1 className="logo-text dark:text-cultured">
+                Beatrice <span className="gradient-text">Wambui</span>
+              </h1>
+            </Link>
+          </div>
+          <div className="lg:hidden flex space-x-2 items-center">
+            <button
+              className="bg-crayola text-white p-2 rounded-lg"
+              onClick={toggleMobileMenu}
+            >
+              {mobileMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+            </button>
+            <DarkModeSwitch />
+          </div>
+        </div>
+
+        {mobileMenuOpen && (
+          <nav className="bg-white dark:bg-black p-4 mt-2 dark:text-cultured">
+            <ul>
+              <li>
+                <Link
+                  href="/"
+                  className={
+                    currentRoute === "/"
+                      ? "text-crayola"
+                      : "text-black dark:text-cultured"
+                  }
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/resume"
+                  className={
+                    currentRoute === "/resume"
+                      ? "text-crayola"
+                      : "text-black dark:text-cultured"
+                  }
+                >
+                  Resume
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/work"
+                  className={
+                    currentRoute === "/work"
+                      ? "text-crayola"
+                      : "text-black dark:text-cultured"
+                  }
+                >
+                  Work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className={
+                    currentRoute === "/contact"
+                      ? "text-crayola"
+                      : "text-black dark:text-cultured"
+                  }
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
+      </div>
     </div>
   );
 }
