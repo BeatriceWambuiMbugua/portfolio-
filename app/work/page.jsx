@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import AppDevelopment from "../../components/AppDevelopment";
 import Design from "../../components/Design";
 import Footer from "../../components/Footer";
@@ -6,11 +8,16 @@ import Navbar from "../../components/Navbar";
 import Profile from "../../components/Profile";
 import WebsiteDevelopment from "../../components/WebsiteDevelopment";
 
-
 export default function Portfolio() {
+  const [activeTab, setActiveTab] = useState("all");
+
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+  };
+
   return (
-    <div className=" container mx-auto grid grid-cols-12 md:gap-10 justify-between  px-5  dark:bg-eerie-black">
-    <Profile />
+    <div className="container mx-auto grid grid-cols-12 md:gap-10 justify-between px-5 dark:bg-eerie-black">
+      <Profile />
       <div className="col-span-12 lg:col-span-8">
         <Navbar />
         <div
@@ -19,82 +26,82 @@ export default function Portfolio() {
           data-aos-duration="3000"
         >
           {/* Portfolio heading */}
-          <div className="flex gap-4 items-center pt-4 mt-5 ">
-            <h3 className="font-normal text-3xl dark:text-cultured  ">
+          <div className="flex gap-4 items-center pt-4 mt-5">
+            <h3 className="font-normal text-3xl dark:text-cultured">
               Portfolio
             </h3>
-            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden " />
+            <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden" />
           </div>
           {/* Tab Content */}
-
-          <div class="mb-4 border-b border-gray-200 dark:border-eerie-black ">
+          <div className="mb-4 border-b border-gray-200 dark:border-eerie-black">
             <ul
-              class="flex flex-wrap -mb-px text-sm font-medium text-center justify-end"
+              className="flex flex-wrap -mb-px text-sm font-medium text-center justify-end"
               id="myTab"
-              data-tabs-toggle="#myTabContent"
               role="tablist"
             >
-              <li class="mr-2" role="presentation">
+              <li className="mr-2" role="presentation">
                 <button
-                  class="inline-block p-4 border-b-2 rounded-t-lg"
-                  id="all-tab"
-                  data-tabs-target="#all"
-                  type="button"
+                  className={`inline-block p-4 border-b-2 rounded-t-lg ${
+                    activeTab === "all"
+                      ? "border-crayola"
+                      : "border-transparent"
+                  }`}
+                  onClick={() => handleTabClick("all")}
                   role="tab"
                   aria-controls="all"
-                  aria-selected="true"
+                  aria-selected={activeTab === "all"}
                 >
                   All
                 </button>
               </li>
-              <li class="mr-2" role="presentation">
+              <li className="mr-2" role="presentation">
                 <button
-                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                  id="app-tab"
-                  data-tabs-target="#appdevelopment"
-                  type="button"
+                  className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 ${
+                    activeTab === "appdevelopment" ? "border-crayola" : ""
+                  }`}
+                  onClick={() => handleTabClick("appdevelopment")}
                   role="tab"
                   aria-controls="appdevelopment"
-                  aria-selected="false"
+                  aria-selected={activeTab === "appdevelopment"}
                 >
                   App Development
                 </button>
               </li>
-              <li class="mr-2" role="presentation">
+              <li className="mr-2" role="presentation">
                 <button
-                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                  id="web-tab"
-                  data-tabs-target="#webdevelopment"
-                  type="button"
+                  className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 ${
+                    activeTab === "webdevelopment" ? "border-crayola" : ""
+                  }`}
+                  onClick={() => handleTabClick("webdevelopment")}
                   role="tab"
                   aria-controls="webdevelopment"
-                  aria-selected= "false"
+                  aria-selected={activeTab === "webdevelopment"}
                 >
                   Web Development
                 </button>
               </li>
               <li role="presentation">
                 <button
-                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                  id="design-tab"
-                  data-tabs-target="#design"
-                  type="button"
+                  className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 ${
+                    activeTab === "design" ? "border-crayola" : ""
+                  }`}
+                  onClick={() => handleTabClick("design")}
                   role="tab"
                   aria-controls="design"
-                  aria-selected="false"
+                  aria-selected={activeTab === "design"}
                 >
                   Design
                 </button>
               </li>
               <li role="presentation">
                 <button
-                  class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                  id="mentorship-tab"
-                  data-tabs-target="#mentorship"
-                  type="button"
+                  className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 ${
+                    activeTab === "mentorship" ? "border-crayola" : ""
+                  }`}
+                  onClick={() => handleTabClick("mentorship")}
                   role="tab"
                   aria-controls="mentorship"
-                  aria-selected="false"
+                  aria-selected={activeTab === "mentorship"}
                 >
                   Mentorship
                 </button>
@@ -103,52 +110,28 @@ export default function Portfolio() {
           </div>
           <div id="myTabContent">
             <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-black"
-              id="all"
+              className={`p-4 rounded-lg ${
+                activeTab === "all"
+                  ? "bg-gray-50 dark:bg-black"
+                  : "bg-gray-50 dark:bg-eerie-black"
+              }`}
               role="tabpanel"
               aria-labelledby="all-tab"
             >
-              <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-                <AppDevelopment />
-                <Design />
-                <WebsiteDevelopment />
-                <Mentorship />
-              </div>
-            </div>
-            <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
-              id="appdevelopment"
-              role="tabpanel"
-              aria-labelledby="app-tab"
-            >
-              <AppDevelopment />
-            </div>
-            <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
-              id="webdevelopment"
-              role="tabpanel"
-              aria-labelledby="web-tab"
-            >
-              <WebsiteDevelopment />
-            </div>
-            <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
-              id="design"
-              role="tabpanel"
-              aria-labelledby="design-tab"
-            >
-              <Design />
-            </div>
-            <div
-              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-eerie-black"
-              id="mentorship"
-              role="tabpanel"
-              aria-labelledby="mentorship-tab"
-            >
-              <Mentorship />
+              {activeTab === "all" && (
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+                  <AppDevelopment />
+                  <Design />
+                  <WebsiteDevelopment />
+                  <Mentorship />
+                </div>
+              )}
+              {activeTab === "appdevelopment" && <AppDevelopment />}
+              {activeTab === "webdevelopment" && <WebsiteDevelopment />}
+              {activeTab === "design" && <Design />}
+              {activeTab === "mentorship" && <Mentorship />}
             </div>
           </div>
-
           <div className="text-center pt-4">
             <Footer />
           </div>
@@ -157,5 +140,3 @@ export default function Portfolio() {
     </div>
   );
 }
-
-
