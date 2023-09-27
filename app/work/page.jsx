@@ -33,7 +33,7 @@ export default function Portfolio() {
             <hr className="bg-gradient-to-r from-crayola to-red w-52 h-1 border-0 rounded md:my-10 md:block hidden" />
           </div>
           {/* Tab Content */}
-          <div className="mb-4 border-b border-gray-200 dark:border-eerie-black">
+          <div className="mb-4 border-b border-gray-200 dark:border-eerie-black dark:text-cultured">
             <ul
               className="flex flex-wrap -mb-px text-sm font-medium text-center justify-end"
               id="myTab"
@@ -57,7 +57,7 @@ export default function Portfolio() {
               <li className="mr-2" role="presentation">
                 <button
                   className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 ${
-                    activeTab === "appdevelopment" ? "border-crayola" : ""
+                    activeTab === "appdevelopment" ? "border-crayola" : "border-transparent"
                   }`}
                   onClick={() => handleTabClick("appdevelopment")}
                   role="tab"
